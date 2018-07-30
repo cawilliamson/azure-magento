@@ -8,7 +8,7 @@ DB_SKU=B_Gen5_1
 GIT_REPO=https://github.com/cawilliamson/azure-magento.git # HTTPS Repo URL
 LOCATION=uksouth # azure location
 NAME=magentoecs # site name
-PHP_VER=7.0 # PHP version
+PHP_VER=5.6 # PHP version
 
 # check for github token
 if [ -z "${GIT_TOKEN}" ]; then
@@ -80,8 +80,7 @@ echo
 
 # create webapp
 echo "create webapp"
-az webapp create --name ${NAME} --plan "${NAME}sp" --resource-group ${RES_GRP} \
-  --runtime "php|${PHP_VER}"
+az webapp create --name ${NAME} --plan "${NAME}sp" --resource-group ${RES_GRP} --runtime "php|${PHP_VER}"
 echo
 
 # set scm timeout
