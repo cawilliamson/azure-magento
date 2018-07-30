@@ -87,6 +87,12 @@ echo
 # set scm timeout
 echo "set scm timeout"
 az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_COMMAND_IDLE_TIMEOUT=600
+echo
+
+# set post deployment actions path
+echo "set post deployment actions path"
+az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_POST_DEPLOYMENT_ACTIONS_PATH=azure
+echo
 
 # setup continuous deployments
 echo "setup continuous deployments (takes around 20mins)"
