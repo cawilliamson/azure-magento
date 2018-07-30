@@ -86,7 +86,7 @@ echo
 
 # set scm timeout
 echo "set scm timeout"
-az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} SCM_COMMAND_IDLE_TIMEOUT=600
+az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_COMMAND_IDLE_TIMEOUT=600
 
 # setup continuous deployments
 echo "setup continuous deployments (takes around 20mins)"
