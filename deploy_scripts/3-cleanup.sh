@@ -1,5 +1,5 @@
 #!/bin/sh
 
 rm -rf \
-  ../wwwdata/azure \
+  ../wwwdata/deploy_scripts \
   ../wwwdata/setup.sh

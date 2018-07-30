@@ -91,7 +91,7 @@ echo
 
 # set post deployment actions path
 echo "set post deployment actions path"
-az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_POST_DEPLOYMENT_ACTIONS_PATH=azure
+az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_POST_DEPLOYMENT_ACTIONS_PATH=deploy_scripts
 echo
 
 # setup continuous deployments
