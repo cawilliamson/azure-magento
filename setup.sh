@@ -8,7 +8,7 @@ DB_SKU=B_Gen5_1
 GIT_REPO=https://github.com/cawilliamson/azure-magento.git # HTTPS Repo URL
 LOCATION=uksouth # azure location
 NAME=magentoecs # site name
-PHP_VER=5.6 # PHP version
+PHP_VER=7.0 # PHP version
 
 # check for github token
 if [ -z "${GIT_TOKEN}" ]; then
@@ -80,17 +80,14 @@ echo
 
 # create webapp
 echo "create webapp"
-az webapp create --name ${NAME} --plan "${NAME}sp" --resource-group ${RES_GRP} --runtime "php|${PHP_VER}"
+az webapp create --name ${NAME} --plan "${NAME}sp" --resource-group ${RES_GRP} --runtime "PHP|${PHP_VER}"
 echo
 
-# set scm timeout
-echo "set scm timeout"
-az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_COMMAND_IDLE_TIMEOUT=600
-echo
-
-# set post deployment actions path
-echo "set post deployment actions path"
-az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings SCM_POST_DEPLOYMENT_ACTIONS_PATH=deploy_scripts
+# set webapp settings
+echo "set webapp settings"
+az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings \
+  SCM_COMMAND_IDLE_TIMEOUT=600 \
+  SCM_POST_DEPLOYMENT_ACTIONS_PATH=deploy_scripts
 echo
 
 # setup continuous deployments
