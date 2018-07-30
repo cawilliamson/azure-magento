@@ -6,7 +6,7 @@ cd ..\wwwroot
 # run install steps
 if [ ! -f ./app/etc/local.xml ]; then
   # run setup wizard
-  php bin\magento setup:install \
+  /usr/local/bin/php bin\magento setup:install \
     --admin-firstname="Christopher" \
     --admin-lastname="Williamson" \
     --admin-email="chris.williamson@ecs.co.uk" \
@@ -19,5 +19,10 @@ if [ ! -f ./app/etc/local.xml ]; then
     --no-interaction
 
   # install sample data
-  php bin\magento sampledata:deploy
+  /usr/local/bin/php bin\magento sampledata:deploy
 fi
+
+# cleanup
+rm -rf \
+  ../wwwdata/deploy_scripts \
+  ../wwwdata/setup.sh

@@ -83,6 +83,11 @@ echo "create webapp"
 az webapp create --name ${NAME} --plan "${NAME}sp" --resource-group ${RES_GRP} --runtime "PHP|${PHP_VER}"
 echo
 
+# set webapp php version
+echo "set webapp php version"
+az webapp config set --php-version ${PHP_VER} --name ${NAME} --resource-group ${RES_GRP}
+echo
+
 # set webapp settings
 echo "set webapp settings"
 az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings \
