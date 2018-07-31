@@ -12,6 +12,5 @@ Set-Location -Path ..\wwwroot
 if (-NOT (Test-Path vendor\autoload.php)) {
   Invoke-Process -FilePath "php" -ArgumentList "..\repository\composer.phar install"
 } Else {
-  Invoke-Process -FilePath "php" -ArgumentList "..\repository\composer.phar self-update"
   Invoke-Process -FilePath "php" -ArgumentList "..\repository\composer.phar update"
 }
