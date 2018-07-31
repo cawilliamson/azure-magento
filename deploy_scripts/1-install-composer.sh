@@ -10,6 +10,9 @@
 # workaround skips that stage entirely - allowing us to deploy them using this
 # script which *does* use the correct PHP version.
 #
+# Also be aware - this only applies to the Linux image. Windows images don't
+# attempt to use this site extension.
+#
 
 # fetch and run installer
 curl -s https://getcomposer.org/installer | php
