@@ -8,7 +8,7 @@ Set-Location -Path ..\wwwroot
 
 # install/update composer modules
 if (-NOT (Test-Path vendor\autoload.php)) {
-  Start-Process -FilePath "php" -Wait -ArgumentList '..\repository\composer.phar', 'install'
+  Start-Process -FilePath "php" -Wait -ArgumentList "..\repository\composer.phar", "install"
 } Else {
-  Start-Process -FilePath "php" -Wait -ArgumentList '..\repository\composer.phar', 'update'
+  Start-Process -FilePath "php" -Wait -ArgumentList "..\repository\composer.phar", "update"
 }
