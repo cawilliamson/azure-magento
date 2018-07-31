@@ -14,7 +14,7 @@ Set-Location -Path ..\wwwroot
 # run install steps
 if (-NOT (Test-Path app\etc\local.xml)) {
   # run setup wizard
-  Start-Process -FilePath "php" -Wait -ArgumentList `
+  Start-Process -FilePath "php" -PassThru -Wait -ArgumentList `
     "bin\magento", `
     "setup:install", `
     "--admin-firstname='${APP_FIRSTNAME}'", `

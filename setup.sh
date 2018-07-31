@@ -5,10 +5,10 @@ APP_SKU=S1
 DB_PASS=Pa55W0rd!
 DB_SKU=B_Gen5_1
 DB_USER=app
-GIT_REPO=https://github.com/cawilliamson/azure-magento.git # HTTPS Repo URL
-LOCATION=uksouth # azure location
-NAME=magentoecs # site name
-PHP_VER=7.1 # PHP version
+GIT_REPO=https://github.com/cawilliamson/azure-magento.git
+LOCATION=uksouth
+NAME=magentoecs
+PHP_VER=7.1
 
 # check for github token
 if [ -z "${GIT_TOKEN}" ]; then
