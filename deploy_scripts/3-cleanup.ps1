@@ -1,2 +1,2 @@
-Remove-Item -Force -Include ..\wwwroot\deploy_scripts\*.ps1
-Remove-Item -Force -Include ..\wwwroot\setup*.sh
+Remove-Item -Force -Path ..\wwwroot\deploy_scripts -Include *.ps1
+Remove-Item -Force -Path ..\wwwroot\ -Include setup.sh
