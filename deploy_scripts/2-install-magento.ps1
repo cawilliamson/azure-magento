@@ -29,5 +29,5 @@ if (-NOT (Test-Path app\etc\local.xml)) {
     "--no-interaction"
 
   # install sample data
-  Start-Process -FilePath "php" -Wait -ArgumentList 'bin\magento', 'sampledata:deploy'
+  Start-Process -FilePath "php" -Wait -ArgumentList "bin\magento", "sampledata:deploy"
 }

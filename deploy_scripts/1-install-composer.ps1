@@ -1,5 +1,4 @@
 # fetch and run installer
-$request = Invoke-WebRequest -Uri "http://getcomposer.org/installer" -OutFile "composer-setup.php"
 Start-Process -FilePath "php" -Wait -ArgumentList "composer-setup.php"
 Remove-Item -Force -Path composer-setup.php
 
@@ -10,5 +9,6 @@ Set-Location -Path ..\wwwroot
 if (-NOT (Test-Path vendor\autoload.php)) {
   Start-Process -FilePath "php" -Wait -ArgumentList "..\repository\composer.phar", "install"
 } Else {
+  Start-Process -FilePath "php" -Wait -ArgumentList "..\repository\composer.phar", "self-update"
   Start-Process -FilePath "php" -Wait -ArgumentList "..\repository\composer.phar", "update"
 }
