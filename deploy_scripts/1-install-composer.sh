@@ -6,8 +6,9 @@ curl -s https://getcomposer.org/installer | php
 # change to web dir
 cd ../wwwroot
 
-# move composer.json in to place (used to skip azure site extension - breaks install)
+# move composer files in to place (used to skip azure site extension - breaks install)
 mv composer.skipauto.json composer.json
+mv composer.skipauto.lock composer.lock
 
 # install/update composer modules
 if [ ! -f ./vendor/autoload.php ]; then
