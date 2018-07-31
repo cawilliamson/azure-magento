@@ -87,7 +87,7 @@ echo
 echo "set webapp settings"
 az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings \
   SCM_COMMAND_IDLE_TIMEOUT=600 \
-  SCM_POST_DEPLOYMENT_ACTIONS_PATH=/home/site/repository/deploy_scripts
+  SCM_POST_DEPLOYMENT_ACTIONS_PATH=deploy_scripts
 echo
 
 # setup continuous deployments
