@@ -3,4 +3,4 @@
 # cleanup
 rm -rf \
   ../wwwdata/deploy_scripts \
-  ../wwwdata/setup.sh
+  ../wwwdata/setup*.sh
