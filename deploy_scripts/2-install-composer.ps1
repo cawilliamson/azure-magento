@@ -1,6 +1,6 @@
 # fetch and run installer
-$request = Invoke-WebRequest -Uri https://getcomposer.org/installer -OutFile composer-setup.php
-php composer-setup.php
+$request = Invoke-WebRequest -Uri "http://getcomposer.org/installer" -OutFile "composer-setup.php"
+Start-Process -FilePath "php" -Wait -ArgumentList "composer-setup.php"
 Remove-Item -Force -Path composer-setup.php
 
 # change to web dir
