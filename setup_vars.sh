@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # set these parameters before doing anything else!
 APP_EMAIL=chris.williamson@ecs.co.uk
