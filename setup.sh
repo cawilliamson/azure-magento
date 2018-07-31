@@ -1,14 +1,6 @@
 #!/bin/sh
 
-# set these parameters before doing anything else!
-APP_SKU=S1
-DB_USER=app
-DB_PASS=Pa55W0rd!
-DB_SKU=B_Gen5_1
-GIT_REPO=https://github.com/cawilliamson/azure-magento.git # HTTPS Repo URL
-LOCATION=uksouth # azure location
-NAME=magentoecs # site name
-PHP_VER=7.0 # PHP version
+. setup_vars.sh
 
 # check for github token
 if [ -z "${GIT_TOKEN}" ]; then

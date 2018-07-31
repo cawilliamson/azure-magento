@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. ../setup_vars.sh
+
 # change to web dir
 cd ../wwwroot
 
@@ -7,15 +9,15 @@ cd ../wwwroot
 if [ ! -f ./app/etc/local.xml ]; then
   # run setup wizard
   php bin/magento setup:install \
-    --admin-firstname="Christopher" \
-    --admin-lastname="Williamson" \
-    --admin-email="chris.williamson@ecs.co.uk" \
-    --admin-user="admin" \
-    --admin-password="Pa55W0rd!" \
-    --db-host="magentoecssql.mysql.database.azure.com" \
-    --db-name="magentoecsdb" \
-    --db-user="app@magentoecssql" \
-    --db-password="Pa55W0rd!" \
+    --admin-firstname="${APP_FIRSTNAME}" \
+    --admin-lastname="${APP_LASTNAME}" \
+    --admin-email="${APP_EMAIL}" \
+    --admin-user="${APP_USER}" \
+    --admin-password="${APP_PASS}" \
+    --db-host="${NAME}sql.mysql.database.azure.com" \
+    --db-name="${NAME}db" \
+    --db-user="${DB_USER}@${NAME}sql" \
+    --db-password="${DB_PASS}" \
     --no-interaction
 
   # install sample data
