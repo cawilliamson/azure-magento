@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # change to web dir
-cd ..\wwwroot
+cd ../wwwroot
 
 # run install steps
 if [ ! -f ./app/etc/local.xml ]; then
@@ -21,8 +21,3 @@ if [ ! -f ./app/etc/local.xml ]; then
   # install sample data
   php bin/magento sampledata:deploy
 fi
-
-# cleanup
-rm -rf \
-  ../wwwdata/deploy_scripts \
-  ../wwwdata/setup.sh
