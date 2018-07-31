@@ -9,7 +9,7 @@ Set-Variable DB_USER app
 Set-Variable NAME magentoecs
 
 # import modules
-Import-Module .\Invoke-Process.psm1
+Import-Module .\deploy_scripts\Invoke-Process.psm1
 
 # change to web dir
 Set-Location -Path ..\wwwroot

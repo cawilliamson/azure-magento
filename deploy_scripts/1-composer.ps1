@@ -1,5 +1,5 @@
 # import modules
-Import-Module .\Invoke-Process.psm1
+Import-Module .\deploy_scripts\Invoke-Process.psm1
 
 # fetch and run installer
 Invoke-Process -FilePath "php" -ArgumentList "composer-setup.php"
