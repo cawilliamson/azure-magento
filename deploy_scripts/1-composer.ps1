@@ -1,3 +1,6 @@
+# import modules
+Import-Module Invoke-Process
+
 # fetch and run installer
 Invoke-Process -FilePath "php" -ArgumentList "composer-setup.php"
 Remove-Item -Force -Path composer-setup.php

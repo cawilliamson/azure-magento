@@ -8,6 +8,9 @@ Set-Variable DB_PASS Pa55W0rd!
 Set-Variable DB_USER app
 Set-Variable NAME magentoecs
 
+# import modules
+Import-Module Invoke-Process
+
 # change to web dir
 Set-Location -Path ..\wwwroot
 
