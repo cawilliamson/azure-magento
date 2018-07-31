@@ -2,5 +2,5 @@
 
 # cleanup
 rm -rf \
-  ../wwwdata/scripts \
+  ../wwwdata/deploy_scripts \
   ../wwwdata/setup*.sh
