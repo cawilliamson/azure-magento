@@ -1,12 +1,12 @@
 # set these parameters before doing anything else!
-Set-Variable APP_EMAIL=chris.williamson@ecs.co.uk
-Set-Variable APP_FIRSTNAME=Christopher
-Set-Variable APP_LASTNAME=Williamson
-Set-Variable APP_PASS=Pa55W0rd!
-Set-Variable APP_USER=admin
-Set-Variable DB_PASS=Pa55W0rd!
-Set-Variable DB_USER=app
-Set-Variable NAME=magentoecs # site name
+Set-Variable APP_EMAIL chris.williamson@ecs.co.uk
+Set-Variable APP_FIRSTNAME Christopher
+Set-Variable APP_LASTNAME Williamson
+Set-Variable APP_PASS Pa55W0rd!
+Set-Variable APP_USER admin
+Set-Variable DB_PASS Pa55W0rd!
+Set-Variable DB_USER app
+Set-Variable NAME magentoecs
 
 # change to web dir
 cd ..\wwwroot
