@@ -1,6 +1,14 @@
 #!/bin/bash
 
-. setup_vars.sh
+# set these parameters before doing anything else!
+APP_SKU=S1
+DB_PASS=Pa55W0rd!
+DB_SKU=B_Gen5_1
+DB_USER=app
+GIT_REPO=https://github.com/cawilliamson/azure-magento.git # HTTPS Repo URL
+LOCATION=uksouth # azure location
+NAME=magentoecs # site name
+PHP_VER=7.1 # PHP version
 
 # check for github token
 if [ -z "${GIT_TOKEN}" ]; then
@@ -50,7 +58,7 @@ echo
 
 # create app service plan
 echo "create app service plan"
-az appservice plan create --name "${NAME}sp" --resource-group ${RES_GRP} --sku ${APP_SKU} --is-linux
+az appservice plan create --name "${NAME}sp" --resource-group ${RES_GRP} --sku ${APP_SKU}
 echo
 
 # create mysql server
