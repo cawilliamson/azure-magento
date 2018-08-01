@@ -28,9 +28,7 @@ if [ -z "${RES_GRP}" ]; then
   exit 1
 fi
 
-###
 ### BEGIN - macos specific
-###
 
 # install homebrew
 echo "install homebrew (if needed)"
@@ -42,9 +40,7 @@ echo "install azure-cli (if needed)"
 az --version >/dev/null || brew install azure-cli
 echo
 
-###
 ### END - macos specific
-###
 
 # login to azure
 echo "logging in to azure"
