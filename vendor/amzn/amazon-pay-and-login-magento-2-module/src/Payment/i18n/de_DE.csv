@@ -1,4 +1,4 @@
-﻿
+
 "Amazon authorize invalid state : %1 with reason %2","Unerwarteter Status für die Amazon Pay-Autorisierung. Status: %1; Ursachencode: %2"
 "Amazon capture declined : %1","Capture wurde von Amazon Pay abgelehnt. Ursachencode: %1"
 "Amazon capture invalid state : %1 with reason %2","Unerwarteter Status für Amazon Pay-Capture. Status: %1; Ursachencode: %2"
