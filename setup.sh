@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # set these parameters before doing anything else!
-APP_SKU=B2
+APP_SKU=P3V2
 DB_PASS=Pa55W0rd!
-DB_SKU=B_Gen5_1
+DB_SKU=GP_Gen5_4
 DB_USER=app
 GIT_REPO=https://github.com/cawilliamson/azure-magento.git
 LOCATION=uksouth
