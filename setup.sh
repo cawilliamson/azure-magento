@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set these parameters before doing anything else!
-APP_SKU=S1
+APP_SKU=B2
 DB_PASS=Pa55W0rd!
 DB_SKU=B_Gen5_1
 DB_USER=app
