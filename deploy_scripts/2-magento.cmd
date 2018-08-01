@@ -27,6 +27,6 @@ IF NOT EXIST app\etc\local.xml (
     --no-interaction
 
   REM create statics
-  php bin\magento setup:static-content:deploy
+  php bin\magento setup:static-content:deploy -f
   php bin\magento indexer:reindex
 )
