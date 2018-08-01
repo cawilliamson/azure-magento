@@ -25,4 +25,8 @@ IF NOT EXIST app\etc\local.xml (
     --db-user="%DB_USER%@%NAME%sql" ^
     --db-password="%DB_PASS%" ^
     --no-interaction
+
+  REM create statics
+  php bin\magento setup:static-content:deploy
+  php bin\magento indexer:reindex
 )
