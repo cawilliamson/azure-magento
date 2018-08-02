@@ -91,3 +91,8 @@ echo "setup continuous deployments (takes around 20mins)"
 az webapp deployment source config --name ${NAME} --resource-group ${RES_GRP} \
   --repo-url ${GIT_REPO} --branch master --git-token ${GIT_TOKEN}
 echo
+
+# activate routing
+echo "restarting webapp to enable routing (web.config)"
+az webapp restart --name ${NAME} --resource-group ${RES_GRP}
+echo
