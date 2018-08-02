@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # set these parameters before doing anything else!
-APP_SKU=P3V2
+APP_SKU=S2
 DB_PASS=Pa55W0rd!
-DB_SKU=GP_Gen5_4
+DB_SKU=GP_Gen5_2
 DB_USER=app
 GIT_REPO=https://github.com/cawilliamson/azure-magento.git
 LOCATION=uksouth
@@ -82,7 +82,7 @@ echo
 # set webapp settings
 echo "set webapp settings"
 az webapp config appsettings set --resource-group ${RES_GRP} --name ${NAME} --settings \
-  SCM_COMMAND_IDLE_TIMEOUT=600 \
+  SCM_COMMAND_IDLE_TIMEOUT=1200 \
   SCM_POST_DEPLOYMENT_ACTIONS_PATH=deploy_scripts
 echo
 
